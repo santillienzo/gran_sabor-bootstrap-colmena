@@ -43,7 +43,7 @@
                             <a class="nav-link" href="">Carrito</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/iniciar-sesion.html">Perfil</a>
+                            <a class="nav-link" href="/iniciar-sesion.html">Iniciar sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -62,80 +62,79 @@
         </div>
     </nav>
 
-    <main class="form-signin w-50 m-auto d-flex align-items-center justify-content-center" style="height: calc(100vh - 56px);">
-        <form class="w-100" id="form">
-          <h1 class="h3 mb-3 fw-normal">Registrarse</h1>
-          <div class="d-flex flex-column gap-1">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="name" placeholder="name@example.com">
-                <label for="name">Nombre</label>
-              </div>
-              <div class="form-floating">
-                <input type="text" class="form-control" id="lastname" placeholder="name@example.com">
-                <label for="lastname">Apellido</label>
-              </div>
-              <div class="form-floating">
-                <input type="text" class="form-control" id="user" placeholder="name@example.com">
-                <label for="user">Nombre de usuario</label>
-              </div>
-              <div class="form-floating">
-                <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                <label for="floatingInput">Email</label>
-              </div>
-              <div class="form-floating">
-                <input type="password" class="form-control" id="password" placeholder="Password">
-                <label for="password">Contraseña</label>
-              </div>
-              <div class="form-floating">
-                <input type="password" class="form-control" id="_password" placeholder="Password">
-                <label for="_password">Repetir contraseña</label>
-              </div>
-              <p class="my-2">¿Ya tienes una cuenta? <a href="/iniciar-sesion.html">Iniciar sesión</a></p>
-              <button class="btn btn-primary w-100 py-2" type="submit" href="/profile.html">Registrarse</button>
-          </div>
+    <main class="container row d-flex mx-auto align-items-center justify-content-center" style="min-height: calc(100vh - 56px); margin-top: 56px;">
+        <form class="col-12 col-md-6" id="form">
+            <h3 class="mb-3 fw-normal">Registrarse</h3>
+            <div class="d-flex flex-column gap-1">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="name" placeholder="name@example.com">
+                    <label for="name">Nombre</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="lastname" placeholder="name@example.com">
+                    <label for="lastname">Apellido</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="user" placeholder="name@example.com">
+                    <label for="user">Nombre de usuario</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <label for="password">Contraseña</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="password" class="form-control" id="_password" placeholder="Password">
+                    <label for="_password">Repetir contraseña</label>
+                  </div>
+                  <p class="my-2">¿Ya tienes una cuenta? <a href="/iniciar-sesion.html">Iniciar sesión</a></p>
+                  <button class="btn btn-primary w-100 py-2" type="submit">Registrarse</button>
+            </div>
         </form>
-      </main>
-     <!-- TOAST -->
-     <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    </main>
+
+    <!-- TOAST -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-          <div class="toast-header">
+            <div class="toast-header">
             <strong class="me-auto">Registro</strong>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-          </div>
-          <div class="toast-body bg-success-subtle">
-            Se registró correctamente
-          </div>
+            </div>
+            <div class="toast-body bg-success-subtle">
+                Se registró correctamente
+            </div>
         </div>
     </div>
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="errorToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-          <div class="toast-header">
+            <div class="toast-header">
             <strong class="me-auto">Registro</strong>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-          </div>
-          <div class="toast-body bg-danger-subtle">
+            </div>
+            <div class="toast-body bg-danger-subtle">
             Por favor completa todos los campos! 
-          </div>
+            </div>
         </div>
     </div>
 
-
-    <!-- Footer-->
     <div
-        class="container"
+      class="container"
     >
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">Gran Sabor</a>
-            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Gran Sabor, Inc</span>
+          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">Gran Sabor</a>
+          <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Gran Sabor, Inc</span>
         </div>
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href=""><i class="bi bi-facebook"></i></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href=""><i class="bi bi-instagram"></i></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href=""><i class="bi bi-twitter-x"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href=""><i class="bi bi-facebook"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href=""><i class="bi bi-instagram"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href=""><i class="bi bi-twitter-x"></i></a></li>
         </ul>
-        </footer>
-    </div>
+      </footer>
+    </div>    
 
     <!--CDN Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
