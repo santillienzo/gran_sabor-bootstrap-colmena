@@ -62,6 +62,53 @@
         </div>
     </nav>
 
+    <main class="mt-5 d-flex flex-column gap-5" style="min-height: calc(100vh - 10rem);">
+        <section class="p-3">
+            <div class="d-flex  gap-1 justify-content-between">
+                <h3>Administración de productos</h3>
+                <button class="btn btn-primary d-flex gap-1"><i class="bi bi-plus"></i> <span class="d-none d-md-block">Agregar producto</span></button>
+            </div>
+            <div class="table-responsive" style="max-height: 70vh; overflow-y: auto;">
+
+                <table class="table align-middle mb-0 bg-white">
+                    <thead class="bg-light">
+                      <tr>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody id="productTableBody">
+                                       
+                    </tbody>
+                  </table>
+            </div>
+        </section>
+        <section class="p-3">
+            <div class="d-flex  gap-1 justify-content-between">
+                <h3 class="">Administración de usuarios</h3>
+                <button class="btn btn-primary d-flex gap-1"><i class="bi bi-plus"></i> <span class="d-none d-md-block">Agregar usuario</span></button>
+            </div>
+            <div class="table-responsive" style="max-height: 70vh; overflow-y: auto;">
+
+                <table class="table align-middle mb-0 bg-white">
+                    <thead class="bg-light">
+                      <tr>
+                        <th>Nombre y usuario</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                      
+                      
+                    </tbody>
+                  </table>
+            </div>
+        </section>
+    </main>
 
 
     <div
