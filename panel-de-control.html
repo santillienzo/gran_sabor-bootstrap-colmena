@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
+    <title>Panel de control</title>
     <!--CDN Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!--CDN Bootstrap ICONS-->
@@ -62,73 +62,74 @@
         </div>
     </nav>
 
-    <main class="container row m-auto d-flex align-items-center justify-content-center" style="height: calc(100vh - 56px);">
-        <form class="col-12 col-md-6" id="form">
-            <h3 class="mb-3 fw-normal">Iniciar sesión</h3>
-            <div class="d-flex flex-column gap-1">
-                <div class="form-floating">
-                    <input type="text" class="form-control" name="user" id="user" placeholder="ejemploDeNombre">
-                    <label for="user">Nombre de usuario</label>
-                </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-                    <label for="password">Password</label>
-                </div>
-                <p class="my-2">¿Eres nuevo? <a href="/registrarse.html">Regístrate</a></p>
-                <button class="btn btn-primary w-100 py-2" type="submit">Iniciar sesión</button>
+    <main class="mt-5 d-flex flex-column gap-5" style="min-height: calc(100vh - 10rem);">
+        <section class="p-3">
+            <div class="d-flex  gap-1 justify-content-between">
+                <h3>Administración de productos</h3>
+                <button class="btn btn-primary d-flex gap-1"><i class="bi bi-plus"></i> <span class="d-none d-md-block">Agregar producto</span></button>
             </div>
-            <caption>
-                <small>
-                    *Puedes iniciar sesión con las siguientes credenciales: 
-                    <b>donero (usuario)</b> y <b>ewedon (contraseña)</b>
-                </small>
-            </caption>
-        </form>
+            <div class="table-responsive" style="max-height: 70vh; overflow-y: auto;">
+
+                <table class="table align-middle mb-0 bg-white">
+                    <thead class="bg-light">
+                      <tr>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody id="productTableBody">
+                                       
+                    </tbody>
+                  </table>
+            </div>
+        </section>
+        <section class="p-3">
+            <div class="d-flex  gap-1 justify-content-between">
+                <h3 class="">Administración de usuarios</h3>
+                <button class="btn btn-primary d-flex gap-1"><i class="bi bi-plus"></i> <span class="d-none d-md-block">Agregar usuario</span></button>
+            </div>
+            <div class="table-responsive" style="max-height: 70vh; overflow-y: auto;">
+
+                <table class="table align-middle mb-0 bg-white">
+                    <thead class="bg-light">
+                      <tr>
+                        <th>Nombre y usuario</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                      
+                      
+                    </tbody>
+                  </table>
+            </div>
+        </section>
     </main>
 
-    <!-- TOAST -->
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div class="toast" id="successToast" role="alert">
-            <div class="toast-header">
-                <strong class="me-auto">Inicio de sesión</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-            </div>
-            <div class="toast-body bg-success-subtle">
-                Se inició sesión correctamente
-            </div>
-        </div>
-    </div>
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div class="toast" id="errorToast" role="alert">
-            <div class="toast-header">
-                <strong class="me-auto">Inicio de sesión</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-            </div>
-            <div class="toast-body bg-danger-subtle">
-                Nombre de usuario y/o contraseña incorrectos 
-            </div>
-        </div>
-    </div>
 
     <div
-      class="container"
+    class="container"
     >
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
-          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">Gran Sabor</a>
-          <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Gran Sabor, Inc</span>
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">Gran Sabor</a>
+            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Gran Sabor, Inc</span>
         </div>
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3"><a class="text-body-secondary" href=""><i class="bi bi-facebook"></i></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href=""><i class="bi bi-instagram"></i></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href=""><i class="bi bi-twitter-x"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href=""><i class="bi bi-facebook"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href=""><i class="bi bi-instagram"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href=""><i class="bi bi-twitter-x"></i></a></li>
         </ul>
-      </footer>
-    </div>    
-
+        </footer>
+    </div>
+    
     <!--CDN Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <!--JAVASCRIPT-->
-    <script type="module" src="lib/pages/iniciar-sesion.js"></script>
+    <script type="module" src="lib/pages/panel-de-control.js"></script>
 </body>
 </html>
