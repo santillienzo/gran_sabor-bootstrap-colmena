@@ -11,6 +11,7 @@
     
 </head>
 <body>
+    <!-- Nav -->
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
         <div class="container-fluid">
             <!--ICON-->
@@ -61,12 +62,20 @@
             </div>
         </div>
     </nav>
-
+    <!-- Tables -->
     <main class="mt-5 d-flex flex-column gap-3" style="min-height: calc(100vh - 10rem);">
         <section class="p-3">
             <div class="d-flex  gap-1 justify-content-between">
                 <h3>Administración de productos</h3>
-                <button class="btn btn-primary d-flex gap-1"><i class="bi bi-plus"></i> <span class="d-none d-md-block">Agregar producto</span></button>
+                <button 
+                    class="btn btn-primary d-flex gap-1"
+                    type="button" 
+                    data-bs-toggle="modal"
+                    data-bs-target="#addProductoModal"
+                >
+                    <i class="bi bi-plus"></i> 
+                    <span class="d-none d-md-block">Agregar producto</span>
+                </button>
             </div>
             <div class="table-responsive" style="max-height: 70vh; overflow-y: auto;">
 
@@ -88,7 +97,15 @@
         <section class="p-3">
             <div class="d-flex  gap-1 justify-content-between">
                 <h3 class="">Administración de usuarios</h3>
-                <button class="btn btn-primary d-flex gap-1"><i class="bi bi-plus"></i> <span class="d-none d-md-block">Agregar usuario</span></button>
+                <button 
+                    class="btn btn-primary d-flex gap-1"
+                    type="button" 
+                    data-bs-toggle="modal"
+                    data-bs-target="#addUsersModal"
+                >
+                    <i class="bi bi-plus"></i> 
+                    <span class="d-none d-md-block">Agregar usuario</span>
+                </button>
             </div>
             <div class="table-responsive" style="max-height: 70vh; overflow-y: auto;">
 
@@ -110,9 +127,100 @@
         </section>
     </main>
 
+    <!-- Modales -->
+    <!-- Modal para agregar productos -->
+    <div class="modal fade" id="addProductoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <form class="modal-content" id="addProductsForm">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">Agregar producto</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Título</label>
+                    <input type="text" class="form-control input" id="title" placeholder="Remera hombre">
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Imagen</label>
+                    <input type="text" class="form-control input" id="image" placeholder="https://img...">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Descripción</label>
+                    <textarea class="form-control input" id="description" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Precio</label>
+                    <input type="number" class="form-control input" id="price" placeholder="25">
+                </div>
+                <div>
+                    <label for="category" class="form-label">Categoría</label>
+                    <select class="form-select input" aria-label="category">
+                        <option selected value="men's clothing">men's clothing</option>
+                        <option value="jewelery">jewelery</option>
+                        <option value="electronics">electronics</option>
+                        <option value="women's clothing">women's clothing</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-plus"></i> 
+                    Agregar
+                </button>
+            </div>
+        </form>
+        </div>
+      </div>
+    <!-- Modal para agregar usuarios -->
+    <div class="modal fade" id="addUsersModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <form class="modal-content" id="addUsersForm">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">Agregar usuario</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Nombre de usuario</label>
+                    <input type="text" class="form-control input" id="username" placeholder="juanperez85">
+                </div>
+                <div class="d-flex gap-1 mb-3">
+                    <div>
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control input" id="name" placeholder="Juan">
+                    </div>
+                    <div>
+                        <label for="lastname" class="form-label">Apellido</label>
+                        <input type="text" class="form-control input" id="lastname" placeholder="Perez">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control input" id="email" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Número de teléfono</label>
+                    <input type="text" class="form-control input" id="phone" placeholder="11441234318">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-plus"></i> 
+                    Agregar
+                </button>
+            </div>
+        </form>
+        </div>
+      </div>
 
+
+
+    <!-- Footer -->
     <div
-    class="container"
+        class="container"
     >
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
